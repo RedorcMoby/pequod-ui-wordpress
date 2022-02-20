@@ -18,7 +18,7 @@ let selectedAccount;
 /**
  * Setup the orchestra
  */
-function init() {
+window.init = function init() {
 
     console.log("Initializing example");
     console.log("WalletConnectProvider is", WalletConnectProvider);
@@ -68,7 +68,7 @@ function init() {
 /**
  * Connect wallet button pressed.
  */
-async function onConnect() {
+window.onConnect = async function onConnect() {
 
     console.log("Opening a dialog", web3Modal);
     try {
@@ -111,6 +111,6 @@ async function onConnect() {
     console.log("Got accounts", accounts);
 }
 
-function getWeb3() {
+window.getWeb3 = function getWeb3() {
     return new Web3(provider)
 }
