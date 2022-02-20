@@ -1,6 +1,6 @@
 {
   "name": "pequod-ui-wordpress",
-  "version": "1.0.0-SNAPSHOT",
+  "version": "1.0.0",
   "description": "",
   "main": "example.js",
   "scripts": {
