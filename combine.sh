@@ -1,0 +1,1 @@
+cat pequod-blockchain-info.js pequod-server-info.js pequod-swap-dynamic-form.js utils.js pequod-controller.js init.js > final.js

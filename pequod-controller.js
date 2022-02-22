@@ -18,7 +18,7 @@ let selectedAccount;
 /**
  * Setup the orchestra
  */
-window.init = function init() {
+function init() {
 
     console.log("Initializing example");
     console.log("WalletConnectProvider is", WalletConnectProvider);
@@ -68,7 +68,7 @@ window.init = function init() {
 /**
  * Connect wallet button pressed.
  */
-window.onConnect = async function onConnect() {
+async function onConnect() {
 
     console.log("Opening a dialog", web3Modal);
     try {
@@ -98,12 +98,6 @@ window.onConnect = async function onConnect() {
 
     console.log("Web3 instance is", web3);
 
-    // Get connected chain id from Ethereum node
-    const chainId = await web3.eth.getChainId();
-    // Load chain information over an HTTP API
-    const chainData = evmChains.getChain(chainId);
-    document.querySelector("#network-name").textContent = chainData.name;
-
     // Get list of accounts of the connected wallet
     const accounts = await web3.eth.getAccounts();
 
@@ -111,6 +105,12 @@ window.onConnect = async function onConnect() {
     console.log("Got accounts", accounts);
 }
 
-window.getWeb3 = function getWeb3() {
+function getWeb3() {
     return new Web3(provider)
+}
+
+function initialClean() {
+    jQuery('#div-trade').hide()
+    // console.log(jQuery('#div-trade').parent())
+    // jQuery('#div-trade').clone().appendTo(jQuery('#div-trade').parent())
 }

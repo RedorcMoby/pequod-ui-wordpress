@@ -1,5 +1,5 @@
 async function updatePageCustomerInfo(customerInfo, customerServerInfo) {
-    $('#connect-wallet-button a').text(hideAddress(customerInfo.wallet))
+    jQuery('#connect-wallet-button a').text(hideAddress(customerInfo.wallet))
 }
 
 async function evaluateWalletInfo() {

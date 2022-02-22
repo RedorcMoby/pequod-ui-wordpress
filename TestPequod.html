@@ -30,7 +30,7 @@
                                         <div class="elementor-widget-wrap elementor-element-populated">
                                             <div class="elementor-element elementor-element-f209f15 elementor-widget elementor-widget-image" data-id="f209f15" data-element_type="widget" id="logo-image" data-widget_type="image.default">
                                                 <div class="elementor-widget-container">
-                                                    <img src="https://mobydicktoken.net/wp-content/plugins/elementor/assets/images/placeholder.png" title="" alt="">															</div>
+                                                    <img src="https://mobydicktoken.net/wp-content/plugins/elementor/assets/images/placeholder.png" width="200px" height="200px" title="" alt="">															</div>
                                             </div>
                                         </div>
                                     </div>
@@ -363,7 +363,7 @@
 <script type="text/javascript" src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 <!-- This is our example code -->
-<script type="text/javascript" src="./example.js"></script>
+<script type="text/javascript" src="./pequod-controller.js"></script>
 <script type="text/javascript" src="./utils.js"></script>
 
 <script type="text/javascript" src="./pequod-swap-dynamic-form.js"></script>
@@ -375,6 +375,7 @@
     jQuery(document).ready(function() {
         init();
         console.log("Init")
+        initialClean()
         jQuery('#connect-wallet-button a').click(async function(event) {
             event.preventDefault();
             await onConnect()
